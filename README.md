@@ -1,9 +1,9 @@
 
 A thin layer acting as glue for [Dogwater](https://github.com/devinivy/dogwater) and [Bedwetter](https://github.com/devinivy/bedwetter).
-It will expose a RESTful CRUD interface based on your models' definitions.
+It will expose a RESTful **CRUD** interface based on your models' definitions.
 
 E.g.:
-If you've defined a Person model using Dogwater, using this plugin will **automatically** expose the following routes:
+If you've defined a *Person* model through *Dogwater*, using this plugin will **automatically** expose the following routes:
 
 	GET /person 			List all Persons
 	GET /person/{id}		Get one Person by id
@@ -13,11 +13,11 @@ If you've defined a Person model using Dogwater, using this plugin will **automa
 	DELETE /person/{id}		Delete a Person by id
 
 ## Installation
-This plugin uses **ES6 features** and it works like charm with **iojs>2.0**. If you are planing to use it with non ES6-enabled engines, consider using [Babel.js](http://babeljs.io)
+This plugin uses **ES6 features** and it works like charm with **iojs > 2.0**. If you are planing to use it with non ES6-enabled engines, consider using [Babel.js](http://babeljs.io).
 
 	npm install --save crudy
 
-Don't forget that Hapi, Dogwater and Bedwetter should be already dependencies of your project, defined in the ```package.json``` file. These are in facts **peer-dependencies**.
+Don't forget that *Hapi*, *Dogwater* and *Bedwetter* should be already dependencies of your project, defined in the ```package.json``` file. These are in facts **peer-dependencies**.
 
 ## Usage
 This module can be used as common [Hapi.js](http://hapijs.com/) plug-in, configuring it in the ```plugin``` section of the ```manifest.json``` of your application:
@@ -41,13 +41,13 @@ This module can be used as common [Hapi.js](http://hapijs.com/) plug-in, configu
 		}	
 	
 
-or using the method ```server.register``` and passing this object as options.
+or using the ```server.register()``` [method](http://hapijs.com/tutorials/plugins#loading-a-plugin) and passing this object as *options*.
 
-Note that you can pass **routes-specific options** to the plug-in: prefix, notes, tags...
+Note that you can pass **routes-specific options** to the plug-in: *prefixes*, *notes*, *tags*...
 
 Using the ```actions``` section you can define which actions should be provided by *crudy*.
 
-If no configuration is passed to the plugin, it will expose the complete **CRUD interface**, as in the example above.
+If no configuration is passed to the *plugin*, it will expose the complete **CRUD interface**, as in the example above.
 
 ## Tests
 	npm test
