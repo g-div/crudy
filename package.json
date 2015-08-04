@@ -1,0 +1,38 @@
+{
+  "name": "crudy",
+  "version": "1.0.0",
+  "description": "A thin layer acting as glue for Dogwater and Bedwetter. It will expose a RESTful CRUD interface based on your models' definitions.",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "lint": "xo",
+    "test": "dredd"
+  },
+  "author": "g-div",
+  "url": "https://github.com/g-div/crudy/issues",
+  "repository": "g-div/crudy",
+  "license": "ISC",
+  "peerDependencies": {
+    "hapi": "^8.4.0",
+    "dogwater": "^0.4.6",
+    "bedwetter": "^1.8.1"
+  },
+  "devDependencies": {
+    "dredd": "^1.0.0",
+    "rejoice": "^2.0.0",
+    "sails-memory": "^0.10.5",
+    "xo": "^0.5.1"
+  },
+  "xo": {
+    "esnext": true,
+    "rules": {
+      "strict": [
+        1,
+        "global"
+      ]
+    }
+  },
+  "dependencies": {
+    "hoek": "^2.14.0"
+  }
+}

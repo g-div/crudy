@@ -1,0 +1,62 @@
+
+A thin layer acting as glue for [Dogwater](https://github.com/devinivy/dogwater) and [Bedwetter](https://github.com/devinivy/bedwetter).
+It will expose a RESTful CRUD interface based on your models' definitions.
+
+E.g.:
+If you've defined a Person model using Dogwater, using this plugin will **automatically** expose the following routes:
+
+	GET /person 			List all Persons
+	GET /person/{id}		Get one Person by id
+	POST /person 			Create a new Person
+	POST /person/{id}		Update a Person by id
+	PATCH /person/{id}		Update a Person by id
+	DELETE /person/{id}		Delete a Person by id
+
+## Installation
+This plugin uses **ES6 features** and it works like charm with **iojs>2.0**. If you are planing to use it with non ES6-enabled engines, consider using [Babel.js](http://babeljs.io)
+
+	npm install --save crudy
+
+Don't forget that Hapi, Dogwater and Bedwetter should be already dependencies of your project, defined in the ```package.json``` file. These are in facts **peer-dependencies**.
+
+## Usage
+This module can be used as common [Hapi.js](http://hapijs.com/) plug-in, configuring it in the ```plugin``` section of the ```manifest.json``` of your application:
+
+		"crudy": {
+			"person": {
+				"config": {
+					"tags": ["api"],
+					"notes": "Notes...",
+					"handler": {
+						"bedwetter": {
+							"prefix": "/api/v1"
+						}
+					}
+				},
+				"actions": {
+					"find": true,
+					"findOne": true
+				}
+			}
+		}	
+	
+
+or using the method ```server.register``` and passing this object as options.
+
+Note that you can pass **routes-specific options** to the plug-in: prefix, notes, tags...
+
+Using the ```actions``` section you can define which actions should be provided by *crudy*.
+
+If no configuration is passed to the plugin, it will expose the complete **CRUD interface**, as in the example above.
+
+## Tests
+	npm test
+
+## Contribution
+Contributions are welcome. Send me your pull-request or open an [issue](https://github.com/g-div/crudy/issues).
+
+### TODOs:
+- [ ] Per-action options (Auth, ACL, Prefix, ...)
+- [ ] Use Joi for validation in order to unlock Hapi-compliant documentation (lout/swagger)
+- [ ] Better Unit testing
+- [ ] Test coverage

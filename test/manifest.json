@@ -1,0 +1,36 @@
+{
+	"server": {
+		"app": {
+			"slogan": "Test manifest"
+		}
+	},
+	"connections": [{
+		"port": 9000,
+		"labels": ["api"]
+	}],
+	"plugins": {
+		"dogwater": {
+			"connections": {
+				"memoryDB": {
+					"adapter": "memory"
+				}
+			},
+			"adapters": {
+				"memory": "sails-memory"
+			},
+			"models": [{
+				"schema": true,
+				"identity": "user",
+				"connection": "memoryDB",
+				"attributes": {
+					"name": {
+						"type": "string",
+						"unique": true
+					}
+				}
+			}]
+		},
+		"bedwetter": {},
+		"../crudy": {}
+	}
+}
