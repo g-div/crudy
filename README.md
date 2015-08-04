@@ -1,3 +1,4 @@
+![crudy](https://cloud.githubusercontent.com/assets/2857535/9075332/fa99d7a4-3b13-11e5-99cb-189b1c67f08c.png)
 
 A thin layer acting as glue for [Dogwater](https://github.com/devinivy/dogwater) and [Bedwetter](https://github.com/devinivy/bedwetter).
 It will expose a RESTful **CRUD** interface based on your models' definitions.
