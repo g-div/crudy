@@ -1,6 +1,6 @@
 ![crudy](https://cloud.githubusercontent.com/assets/2857535/9075332/fa99d7a4-3b13-11e5-99cb-189b1c67f08c.png)
 
-An [hapi](http://hapijs.com/) plugin that will expose a RESTful **CRUD** interface using your [Dogwater](https://github.com/devinivy/dogwater) *models* and [Bedwetter](https://github.com/devinivy/bedwetter)'s *route-handler*.
+A [hapi](http://hapijs.com/) plugin that will expose a RESTful **CRUD** interface using your [Dogwater](https://github.com/devinivy/dogwater) *models* and [Bedwetter](https://github.com/devinivy/bedwetter)'s *route-handler*.
 
 E.g.:
 If you've defined a *Person* model through *Dogwater*, using this plugin will **automatically** expose the following routes:
