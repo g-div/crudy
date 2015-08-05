@@ -1,7 +1,6 @@
 ![crudy](https://cloud.githubusercontent.com/assets/2857535/9075332/fa99d7a4-3b13-11e5-99cb-189b1c67f08c.png)
 
-A thin layer acting as glue for [Dogwater](https://github.com/devinivy/dogwater) and [Bedwetter](https://github.com/devinivy/bedwetter).
-It will expose a RESTful **CRUD** interface based on your models' definitions.
+A [hapi](http://hapijs.com/) plugin that will expose a RESTful **CRUD** interface using your [Dogwater](https://github.com/devinivy/dogwater) Models and [Bedwetter](https://github.com/devinivy/bedwetter).
 
 E.g.:
 If you've defined a *Person* model through *Dogwater*, using this plugin will **automatically** expose the following routes:
@@ -18,7 +17,7 @@ This plugin uses **ES6 features** and it works like charm with **iojs > 2.0**. I
 
 	npm install --save crudy
 
-Don't forget that *Hapi*, *Dogwater* and *Bedwetter* should be already dependencies of your project, defined in the ```package.json``` file. These are in facts **peer-dependencies**.
+Don't forget that *hapi*, *Dogwater* and *Bedwetter* should be already dependencies of your project, defined in the ```package.json``` file. These are in facts **peer-dependencies**.
 
 ## Usage
 This module can be used as common [Hapi.js](http://hapijs.com/) plug-in, configuring it in the ```plugin``` section of the ```manifest.json``` of your application:
