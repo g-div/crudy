@@ -77,8 +77,9 @@ internals.after = function (server, next) {
 				});
 			}
 		}
-		next();
+		
 	}
+	next();
 };
 
 exports.register.attributes = {
