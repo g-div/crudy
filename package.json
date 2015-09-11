@@ -1,6 +1,6 @@
 {
   "name": "crudy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A thin layer acting as glue for Dogwater and Bedwetter. It will expose a RESTful CRUD interface based on your models' definitions.",
   "main": "index.js",
   "scripts": {

@@ -77,7 +77,6 @@ internals.after = function (server, next) {
 				});
 			}
 		}
-		
 	}
 	next();
 };
