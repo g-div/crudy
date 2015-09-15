@@ -45,7 +45,15 @@ or using the ```server.register()``` [method](http://hapijs.com/tutorials/plugin
 
 Note that you can pass **routes-specific options** to the plug-in: *prefixes*, *notes*, *tags*...
 
-Using the ```actions``` section you can define which actions should be provided by *crudy*.
+Using the ```actions``` section you can define which actions should be provided by *crudy*. 
+
+**Possible actions are:**
+
+* find 
+* findOne
+* create
+* update
+* destroy
 
 If no configuration is passed to the *plugin*, it will expose the complete **CRUD interface**, as in the example above.
 
